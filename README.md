@@ -1,12 +1,12 @@
 # Custom 6-Key Macropad with Rotary Encoder & OLED Display
 
-A compact, DIY custom macropad built around the **Seeed Studio XIAO RP2040** microcontroller and running the open-source **KMK Firmware** (CircuitPython). This pad features 6 mechanical keyswitches, a 7-pixel chained NeoPixel RGB strip, a volume rotary encoder, and an SSD1306 128x64 OLED display running custom frame animations.
+A compact, DIY custom macropad built around the **Seeed Studio XIAO RP2040** microcontroller and running the open-source **KMK Firmware** (CircuitPython). This pad features 6 mechanical keyswitches, a 7-pixel chained SK6812 MINI-E RGB strip, a volume rotary encoder, and a sleek 0.91" SSD1306 128x32 OLED display running custom frame animations.
 
 ## 🚀 Features
 * **Dynamic JSON Configuration:** Keybinds are completely modular and loaded on-the-fly from a local `commands.json` file without modifying the main firmware.
 * **Volume Rotary Encoder:** Clockwise/counterclockwise scroll tracking mapped to system volume adjustments.
-* **Custom OLED Animations:** Bypasses default KMK layer readouts to loop custom 1-bit `.pbm` flipbook animations.
-* **RGB Breathing Effect:** Smooth breathing lighting profile across a 7-pixel NeoPixel LED chain.
+* **Custom OLED Animations:** Bypasses default KMK layer readouts to loop custom 1-bit `.pbm` flipbook animations built for the compact 128x32 screen format.
+* **RGB Breathing Effect:** Smooth breathing lighting profile across a 7-pixel SK6812 MINI-E LED chain.
 
 ---
 
@@ -18,37 +18,38 @@ The circuit schematic handles direct GPIO switch tracking to keep the design hig
 ![Project Schematic](hardware/schematic_screenshot.png)
 
 ### ⚡ Printed Circuit Board (PCB) Layout
-The PCB routing is optimized for the tight form factor of the Seeed Studio XIAO footprint. Tracks are routed cleanly with thick power lines to safely drive the addressable NeoPixel rail.
+The 2D PCB layout artwork is optimized for the tight form factor of the Seeed Studio XIAO footprint. Tracks are routed cleanly with thick power lines to safely drive the addressable RGB rail.
 
-| 2D PCB Layout Artwork | 3D Production Render |
+![PCB Layout Grid](hardware/pcb_layout_screenshot.png)
+
+### 📦 Enclosure & Case Assembly
+The enclosure is a low-profile design featuring heatset inserts for durable fastening. 
+
+| Top Case Housing | Bottom Case Plate |
 | :---: | :---: |
-| ![PCB Layout Grid](hardware/pcb_layout_screenshot.png) | ![PCB 3D Realization](hardware/macropad_render.png) |
-
-### 📦 3D-Printed Case Enclosure
-The enclosure features a low-profile, multi-part snap or screw assembly consisting of a top plate, a main housing chassis, and an integrated bezel to keep the SSD1306 display perfectly flush.
-
-![3D Case View](hardware/case_3d_screenshot.png)
+| ![Top Case Screenshot](hardware/top_case_screenshot.png) | ![Bottom Case Screenshot](hardware/bottom_case_screenshot.png) |
 
 * **Layer Height:** 0.2mm
-* **Infill:** 15% - 20% GYROID (for solid weight distribution)
-* **Supports:** None required if oriented flat on the print bed.
+* **Infill:** 15% - 20% Gyroid (provides a solid weight distribution)
+* **Hardware Requirements:** Requires 6x M3 heatset inserts melted into the top case housing, secured using 6x M3x16mm screws from the base plate.
 
 ---
 
 ## 📋 Bill of Materials (BOM)
 
-To build this macropad, you will need the following electronic and structural components:
+The following matrix details the exact hardware required for assembly vs. the total material inventory available:
 
-| Item | Qty | Component Description | Sourcing / Part Notes |
-| :---: | :---: | :--- | :--- |
-| 1 | 1 | **Seeed Studio XIAO RP2040** | Main Microcontroller Board |
-| 2 | 1 | **0.96" SSD1306 OLED Display** | 128x64 Pixel Screen, I2C Interface |
-| 3 | 1 | **EC11 Rotary Encoder** | 15mm or 20mm D-Shaft Encoder |
-| 4 | 6 | **MX-Style Mechanical Switches** | Any linear, tactile, or clicky keyswitches |
-| 5 | 6 | **MX-Compatible Keycaps** | Profile of your choice (e.g., Cherry, OEM, XDA) |
-| 6 | 1 | **WS2812B NeoPixel LED Strip** | 7-Pixel count addressable LED chain |
-| 7 | 1 | **Custom 3D-Printed Case Set** | Top plate and bottom housing frame |
-| 8 | 4 | **M3 Screws / Rubber Feet** | Countersunk hardware for final assembly |
+| Item | Required Qty | Inventory Qty | Component Description | Sourcing / Part Notes |
+| :---: | :---: | :---: | :--- | :--- |
+| 1 | 1 | 1 | **Seeed Studio XIAO RP2040** | Main Microcontroller Board |
+| 2 | 1 | 2 | **0.91" SSD1306 OLED Display** | 128x32 Pixel Screen, I2C Interface |
+| 3 | 1 | 1 | **EC11 Rotary Encoder** | 20mm D-Shaft Encoder |
+| 4 | 6 | 20 | **MX-Style Mechanical Switches** | Keyswitches of choice |
+| 5 | 6 | 1 | **Blank DSA Keycaps** | Full keycap set pack |
+| 6 | 7 | 16 | **SK6812 MINI-E RGB LEDs** | Reverse-mount addressable LEDs |
+| 7 | 6 | 6 | **M3×16mm Screws** | Enclosure fasteners |
+| 8 | 6 | 6 | **M3×5×4mm Heatset Inserts** | Brass threaded chassis inserts |
+| 9 | 0 | 11 | **1N4148 Diodes** | Through-hole matrix diodes (Unused in direct pin layout) |
 
 ---
 
@@ -82,4 +83,4 @@ Your `CIRCUITPY` drive root should look like this:
 ├── boot.py               # Hardware/USB-level configuration script
 ├── main.py               # Main Python firmware script (The core brain)
 ├── commands.json         # Dynamic keymap configuration profile
-└── animation.pbm         # 128x64 compiled monochrome flipbook image strip
+└── animation.pbm         # 128x32 compiled monochrome flipbook image strip
