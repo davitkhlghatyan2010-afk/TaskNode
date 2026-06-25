@@ -2,6 +2,9 @@
 
 A compact, DIY custom macropad built around the **Seeed Studio XIAO RP2040** microcontroller and running the open-source **KMK Firmware** (CircuitPython). This pad features 6 mechanical keyswitches, a 7-pixel chained SK6812 MINI-E RGB strip, a volume rotary encoder, and a sleek 0.91" SSD1306 128x32 OLED display running custom frame animations.
 
+## 🧠 Why I Made This Project
+I designed and constructed this custom 6-key macropad to bridge my interests in physical hardware engineering and digital automation. As someone diving deep into programming and data management, I wanted a physical desktop hub that could trigger specialized macro blocks on-the-fly, optimizing my coding speed while simultaneously teaching me the fundamentals of schematic routing, 3D mechanical enclosure assembly, and firmware layout.
+
 ## 🚀 Features
 * **Dynamic JSON Configuration:** Keybinds are completely modular and loaded on-the-fly from a local `commands.json` file without modifying the main firmware.
 * **Volume Rotary Encoder:** Clockwise/counterclockwise scroll tracking mapped to system volume adjustments.
