@@ -53,6 +53,8 @@ The following matrix details the exact hardware required for assembly vs. the to
 | 7 | 6 | 6 | **M3×16mm Screws** | Enclosure fasteners |
 | 8 | 6 | 6 | **M3×5×4mm Heatset Inserts** | Brass threaded chassis inserts |
 | 9 | 0 | 20 | **1N4148 Diodes** | Through-hole matrix diodes (Unused in direct pin layout) |
+| 10 | 1 | 1 | **Soldering Iron Station** | Required for assembly (Target temperature: 320°C - 350°C) |
+| 11 | 1 | 1 | **Rosin Core Solder Wire** | 60/40 or Lead-Free electrical solder for making connections |
 ---
 
 ## 🛠️ Hardware Pinout Layout
