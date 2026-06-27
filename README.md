@@ -40,20 +40,19 @@ The enclosure is a low-profile design featuring heatset inserts for durable fast
 
 ## 📋 Bill of Materials (BOM)
 
-The following matrix details the exact hardware required for assembly vs. the total material inventory available:
+The following matrix details the exact hardware required for assembly vs. the total material inventory available. You can also download the complete [BOM.csv](./BOM.csv) dataset directly from this repository.
 
 | Item | Required Qty | Inventory Qty | Component Description | Sourcing / Part Notes |
 | :---: | :---: | :---: | :--- | :--- |
-| 1 | 1 | 1 | **Seeed Studio XIAO RP2040** | Main Microcontroller Board |
-| 2 | 1 | 2 | **0.91" SSD1306 OLED Display** | 128x32 Pixel Screen, I2C Interface |
-| 3 | 1 | 1 | **EC11 Rotary Encoder** | 20mm D-Shaft Encoder |
-| 4 | 6 | 20 | **MX-Style Mechanical Switches** | Keyswitches of choice |
-| 5 | 6 | 1 | **Blank DSA Keycaps** | Full keycap set pack |
-| 6 | 7 | 16 | **SK6812 MINI-E RGB LEDs** | Reverse-mount addressable LEDs |
+| 1 | 1 | 1 | **Seeed Studio XIAO RP2040** | Main Microcontroller Board (Unsoldered) |
+| 2 | 1 | 1 | **0.91" SSD1306 OLED Display** | 128x32 Pixel Screen, I2C Interface (**Pin order: GND-VCC-SCL-SDA**) |
+| 3 | 1 | 2 | **EC11 Rotary Encoder** | 20mm D-Shaft Encoder |
+| 4 | 6 | 16 | **MX-Style Mechanical Switches** | Keyswitches of choice |
+| 5 | 6 | 16 | **Blank DSA Keycaps** | White full keycap set pack |
+| 6 | 7 | 20 | **SK6812 MINI-E RGB LEDs** | Reverse-mount addressable LEDs |
 | 7 | 6 | 6 | **M3×16mm Screws** | Enclosure fasteners |
 | 8 | 6 | 6 | **M3×5×4mm Heatset Inserts** | Brass threaded chassis inserts |
-| 9 | 0 | 11 | **1N4148 Diodes** | Through-hole matrix diodes (Unused in direct pin layout) |
-
+| 9 | 0 | 20 | **1N4148 Diodes** | Through-hole matrix diodes (Unused in direct pin layout) |
 ---
 
 ## 🛠️ Hardware Pinout Layout
