@@ -77,6 +77,15 @@ The firmware maps directly to the following physical tracks on the Seeed Studio 
 
 ---
 
+## 🤖 AI Usage Declaration
+This project was developed using a collaborative approach between human engineering and artificial intelligence.
+
+Concept & Exploration: AI was utilized as a learning accelerator to research and explore unfamiliar concepts, including schematic routing techniques, CircuitPython structures, and efficient data management with JSON.
+
+Collaboration over Automation: While AI assisted in breaking down complex technical documentation and troubleshooting hardware configurations, all physical assembly, custom CAD design choices, and structural testing were executed entirely by the author.
+
+---
+
 ## 📂 File Structure Explained
 
 Your `CIRCUITPY` drive root should look like this:
