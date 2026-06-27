@@ -1,0 +1,12 @@
+Item,Required Qty,Inventory Qty,Component Description,Sourcing / Part Notes
+1,1,1,Seeed Studio XIAO RP2040,Main Microcontroller Board (Unsoldered)
+2,1,1,"0.91"" SSD1306 OLED Display","128x32 Pixel Screen, I2C Interface (Pinout: GND-VCC-SCL-SDA)"
+3,1,2,EC11 Rotary Encoder,20mm D-Shaft Encoder
+4,6,16,MX-Style Mechanical Switches,Keyswitches of choice
+5,6,16,Blank DSA Keycaps,White keycaps
+6,7,20,SK6812 MINI-E RGB LEDs,Reverse-mount addressable LEDs
+7,6,6,M3x16mm Screws,Enclosure fasteners
+8,6,6,M3x5x4mm Heatset Inserts,Brass threaded chassis inserts
+9,0,20,1N4148 Diodes,Through-hole matrix diodes (Unused in direct pin layout)
+10,1,1,Soldering Iron Station,Required for assembly (Target temperature: 320°C - 350°C)
+11,1,1,Rosin Core Solder Wire,60/40 or Lead-Free electrical solder for making connections
